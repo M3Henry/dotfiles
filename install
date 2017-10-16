@@ -3,3 +3,4 @@
 DOT="$(dirname $0)"
 
 ln -f -s $DOT/tmux ~/.tmux.conf
+ln -f -s $DOT/nano ~/.nanorc
