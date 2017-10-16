@@ -1,0 +1,13 @@
+[user]
+  name = Henry Wilson
+  email = m3henry@googlemail.com
+[alias]
+  dogs = log --decorate --oneline --graph --summary -s --all
+  a = add .
+[rebase]
+  autosquash = true
+[color "status"]
+  changed = yellow
+  branch = green bold
+[push]
+  default = simple

@@ -4,3 +4,4 @@ DOT="$(dirname $(realpath $0))"
 
 ln -frs $DOT/tmux ~/.tmux.conf
 ln -frs $DOT/nano ~/.nanorc
+ln -frs $DOT/git ~/.gitconfig
