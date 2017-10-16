@@ -10,10 +10,8 @@ bind-key C-a send-prefix
 unbind '"'
 unbind %
 bind c new-window -c '~'
-bind | split-window -v -c '~'
-# '#{pane_current_path}'
-bind \ split-window -h -c '~'
-# '#{pane_current_path}'
+bind | split-window -v -c ''
+bind \ split-window -h -c ''
 
 # switch panes using Alt-arrow without prefix
 bind -n M-Left select-pane -L
