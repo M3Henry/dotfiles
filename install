@@ -1,7 +1,12 @@
-#!/bin/sh
+#!/bin/bash
 
 DOT="$(dirname $(realpath $0))"
 
-ln -frs $DOT/tmux ~/.tmux.conf
-ln -frs $DOT/nano ~/.nanorc
-ln -frs $DOT/git ~/.gitconfig
+function reln {
+	rm -f ~/$2
+	ln -rs $DOT/$1 ~/$2
+}
+
+reln tmux .tmux.conf
+reln nano .nanorc
+reln git .gitconfig
