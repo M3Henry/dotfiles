@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DOT="$(dirname $0)"
+DOT="$(dirname $(realpath $0))"
 
-ln -f -s $DOT/tmux ~/.tmux.conf
-ln -f -s $DOT/nano ~/.nanorc
+ln -frs $DOT/tmux ~/.tmux.conf
+ln -frs $DOT/nano ~/.nanorc
