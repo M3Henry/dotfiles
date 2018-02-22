@@ -4,6 +4,7 @@
 [alias]
   dogs = log --decorate --oneline --graph --summary -s --all
   a = add .
+  s = status -sb
 [rebase]
   autosquash = true
 [color "status"]
@@ -11,3 +12,5 @@
   branch = green bold
 [push]
   default = simple
+[core]
+	editor = nano

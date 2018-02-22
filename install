@@ -7,6 +7,8 @@ function reln {
 	ln -rs $DOT/$1 ~/$2
 }
 
+reln bash/rc .bashrc
+reln bash/profile .bash_profile
 reln tmux .tmux.conf
 reln nano .nanorc
 reln git .gitconfig
