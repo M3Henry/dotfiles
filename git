@@ -1,16 +1,18 @@
 [user]
-  name = Henry Wilson
-  email = m3henry@googlemail.com
+	name = Henry Wilson
+	email = m3henry@googlemail.com
 [alias]
-  dogs = log --decorate --oneline --graph --summary -s --all
-  a = add .
-  s = status -sb
+	dogs = log --decorate --oneline --graph --summary -s --all
+	a = add .
+	s = status -sb
 [rebase]
-  autosquash = true
+	autosquash = true
 [color "status"]
-  changed = yellow
-  branch = green bold
+	changed = yellow
+	branch = green bold
 [push]
-  default = simple
+	default = simple
 [core]
 	editor = nano
+[credential]
+	helper = cache --timeout 7200
