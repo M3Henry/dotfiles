@@ -1,3 +1,13 @@
+set linenumbers
+set numbercolor brightblack
+
+set suspend
+set smarthome
+set boldtext
+
+set tabsize 4
+set autoindent
+
 bind ^S writeout all
 bind ^D exit all
 bind ^Q cancel all
@@ -13,7 +23,7 @@ unbind ^T all
 unbind F12 all
 unbind F8 all
 
-bind ^Z undo all
+# bind ^Z undo all
 bind M-Z redo all
 
 include "~/dotfiles/nanorc/apacheconf.nanorc"
