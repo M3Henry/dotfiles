@@ -16,3 +16,5 @@
 	editor = nano
 [credential]
 	helper = cache --timeout 7200
+[credential "https://github.com"]
+	username = m3henry
