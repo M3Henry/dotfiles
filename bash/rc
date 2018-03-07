@@ -3,9 +3,22 @@ alias la='ls -A'
 alias ll='ls -lh'
 alias lll='ll -a'
 
+
+alias su="su -c 'bash --rcfile ~$(stat -c %U `tty`)/.bashrc'"
+
+
+RESET='[m'
+
+if [ $(id -u) -eq 0 ]
+then
+	COLOR='[1;31m'
+else
+	COLOR='[1;32m'
+fi
+
 if [[ $(tty) == /dev/tty* ]]
 then
-	PS1="[m[[1;32m\u [34m\W[m]\$ "
+	PS1="$RESET[$COLOR\u [34m\W$RESET] "
 else
-	PS1="[m[[1;32m\u@\h [34m\W[m]\$ "
+	PS1="$RESET[$COLOR\u@\h [34m\W$RESET] "
 fi
