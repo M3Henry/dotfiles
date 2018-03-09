@@ -4,6 +4,7 @@
 [alias]
 	dogs = log --decorate --oneline --graph --summary -s --all
 	a = add .
+	c = commit
 	s = status -sb
 [rebase]
 	autosquash = true

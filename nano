@@ -8,6 +8,14 @@ set boldtext
 set tabsize 4
 set autoindent
 
+set multibuffer
+bind Ins verbatim main
+unbind F5 main
+unbind M-F insert
+bind ^R flipnewbuffer insert
+bind ^E flipexecute insert
+bind ^F browser insert
+
 bind ^S writeout all
 bind ^D exit all
 bind ^Q cancel all
