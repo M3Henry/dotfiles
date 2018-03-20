@@ -5,6 +5,8 @@ set suspend
 set smarthome
 set boldtext
 
+set selectedcolor brightyellow,blue
+
 set tabsize 4
 set autoindent
 
@@ -25,6 +27,7 @@ bind M-F searchagain all
 bind ^C copytext all
 bind ^X cut all
 bind ^V uncut all
+bind ^L linter all
 
 unbind ^O all
 unbind ^T all
