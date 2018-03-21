@@ -11,6 +11,10 @@ icolor yellow "^[[:space:]]*i?color[[:space:]]*(bright)?(white|black|red|blue|gr
 icolor magenta "^[[:space:]]*i?color\>" "\<(start|end)="
 ## Strings
 icolor white ""(\\.|[^"])*""
+## Pipes
+color brightred "\|" "[{}]"
+color brightgreen "[()]"
+color brightmagenta "\\<|\\>" "[\^$.*+?]"
 ## Comments
 icolor brightblue "^[[:space:]]*#.*$"
 icolor cyan "^[[:space:]]*##.*$"

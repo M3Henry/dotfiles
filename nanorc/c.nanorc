@@ -9,8 +9,8 @@ color yellow "\<((const|dynamic|reinterpret|static)_cast)\>"
 color yellow "\<(noexcept|alignof|sizeof|typeid|new|delete)\>"
 color yellow "\<(compl|(not|and|or|xor)(_eq)?|bit(and|or))\>"
 color yellow "[.:,+*|=!\%]" "<" ">" "/" "-" "&" 
-color brightyellow "[0-9]([mun]?s|min|h|i[fl]?)"
-color brightyellow "\"sv?"
+color brightyellow "[0-9']([mun]?s|min|h|i[fl]?)\>"
+color brightyellow "\"sv?\>"
 color brightyellow "(\<([0-9]+|0[0-7]*|0x[a-fA-F0-9])|['"])_[a-zA-Z?]+\>"
 
 #	Constants
@@ -21,17 +21,17 @@ color brightwhite "'([^'\]|(\\["'abfnrtv\\]))'" "'\\(([0-3]?[0-7]{1,2}))'" "'\\x
 color brightwhite "\<w?c(in|out|err|log)\>"
 
 #	Types
-color red "\<(void|bool|char|wchar_t|char(16|32)_t|int|short|long|(un)?signed|auto|decltype)\>"
+color red "\<(void|bool|char|wchar_t|char(16|32)_t|int|short|long|(un)?signed)\>"
 color red "\<((size|u?int(ptr|(_(le|f)ast)?(8|16|32|64)|max)|cnd|mtx|tss|fpos|thrd|time|clock|mbstate|ptrdiff|max_align|atomic_(u?intprt|char(16|32)|wchar)|sig_atomic)_t)\>"
 color red "\<(null(ptr|opt)_t)\>"
 color red "\<(vector|array|s?list|deque|stack|(hash_|multi)?(set|map)|bitset|valarray|(basic_|w)?(ios|(osync|[io]|io)stream|[io]?(f|string)stream))\>"
 #	Template Type
-color brightred "\<[A-Z]s?\>"
+color brightred "\<([A-Z]s?|auto|decltype)\>"
 
 #	Classes
 color green "\<(enum|struct|union|class|namespace|template|typename|this)\>"
 #	Access Specifier
-color brightgreen "\<(public|protected|private|virtual|explicit|friend|override|final)\>"
+color brightgreen "\<(virtual|public|protected|private|explicit|friend|override|final)\>"
 #	Storage Specifier
 color brightblue "\<(using|typedef|alignas|extern|static|const(expr)?|mutable|volatile|register|inline|thread_local|operator)\>"
 
@@ -63,6 +63,7 @@ color black,yellow "^[[:space:]]*#[[:space:]]*(define|include|(un|ifn?)def|endif
 ##	Comments
 comment "//"
 color brightblack "//.*"
+color black,white "///.*"
 color brightblack start="/\*" end="\*/"
 
 ## Trailing whitespace
