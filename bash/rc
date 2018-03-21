@@ -6,19 +6,21 @@ alias lll='ll -a'
 
 alias su="su -c 'bash --rcfile ~$(stat -c %U `tty`)/.bashrc'"
 
-
-RESET='[m'
+RED="\[[1;31m\]"
+GREEN="\[[1;32m\]"
+BLUE="\[[1;34m\]"
+RESET="\[[m\]"
 
 if [ $(id -u) -eq 0 ]
 then
-	COLOR='[1;31m'
+	COLOR="$RED"
 else
-	COLOR='[1;32m'
+	COLOR="$GREEN"
 fi
 
 if [[ $(tty) == /dev/tty* ]]
 then
-	PS1="$RESET[$COLOR\u [34m\W$RESET] "
+	export PS1="$RESET[$COLOR\u $BLUE\W$RESET] "
 else
-	PS1="$RESET[$COLOR\u@\h [34m\W$RESET] "
+	export PS1="$RESET[$COLOR\u@\h $BLUE\W$RESET] "
 fi
