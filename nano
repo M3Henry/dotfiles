@@ -1,14 +1,16 @@
+set boldtext
+
 set linenumbers
 set numbercolor brightblack
 
+set selectedcolor brightyellow,blue
+
 set suspend
 set smarthome
-set boldtext
-
-set selectedcolor brightyellow,blue
 
 set tabsize 4
 set autoindent
+set atblanks
 
 set multibuffer
 bind Ins verbatim main
