@@ -13,6 +13,8 @@
 	branch = green bold
 [push]
 	default = simple
+[pull]
+	ff = only
 [core]
 	editor = nano
 [credential]
