@@ -6,6 +6,7 @@
 	a = add .
 	c = commit
 	s = status -sb
+	p = pull --ff-only
 [rebase]
 	autosquash = true
 [color "status"]
