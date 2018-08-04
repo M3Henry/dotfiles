@@ -11,6 +11,7 @@ set smarthome
 set tabsize 4
 set autoindent
 set atblanks
+set nowrap
 
 set multibuffer
 bind Ins verbatim main
