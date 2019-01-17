@@ -1,0 +1,7 @@
+syntax "colorforth" "\.cf$"
+
+color brightwhite "(^|\s)\\\S+"
+color brightred "(^|\s):\S+"
+color brightyellow "(^|\s),\S+"
+color brightgreen "(^|\s)'\S+"
+color brightcyan "(^|\s)\"\S+"
