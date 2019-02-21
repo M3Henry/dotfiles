@@ -17,7 +17,7 @@ color brightyellow "(\<([0-9]+|0[0-7]*|0x[a-fA-F0-9])|['"])_[a-zA-Z?]+\>"
 color brightwhite "\<(null(ptr|opt)|true|false)\>"
 color brightred "\<0[0-7]+\>"
 color brightwhite "\<(0|[1-9][0-9]*|0x[a-f0-9A-F]+|[0-9]*\.[0-9]+)"
-color brightwhite "'([^'\]|(\\["'abfnrtv\\]))'" "'\\(([0-3]?[0-7]{1,2}))'" "'\\x[0-9A-Fa-f]{1,2}'"
+color brightwhite "'([^'\]|(\\["'abefnrtv\\]))'" "'\\(([0-3]?[0-7]{1,2}))'" "'\\x[0-9A-Fa-f]{1,2}'"
 color brightwhite "\<(w?c(in|out|err|log)|hex|dec|oct|endl|memory_order_(relaxed|consume|acquire|release|acq_rel|seq_cst)|this_thread)\>"
 
 #	Types
@@ -57,7 +57,7 @@ color brightwhite,yellow "\<[A-Z_][0-9A-Z_]+\>"
 #	Strings
 color cyan  ""(\\.|[^"])*""
 #	special chars highlighting
-color brightcyan "\\([\\"abfnrtv]|[0-3]?[0-7]{1,2}|x[0-9A-Fa-f]{1,2})"
+color brightcyan "\\([\\"abefnrtv]|[0-3]?[0-7]{1,2}|x[0-9A-Fa-f]{1,2})"
 
 ##	Preprocessor
 color black,yellow "^[[:space:]]*#[[:space:]]*(define|include|(un|ifn?)def|endif|el(if|se)|if|warning|error|pragma).*"
