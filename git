@@ -2,11 +2,13 @@
 	name = Henry Wilson
 	email = m3henry@googlemail.com
 [alias]
+	dos = log --decorate --oneline --summary -s
 	dogs = log --decorate --oneline --graph --summary -s --all
 	a = add .
 	c = commit
 	s = status -sb
 	p = pull --ff-only
+	m = !make
 [rebase]
 	autosquash = true
 [color "status"]
