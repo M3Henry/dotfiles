@@ -21,7 +21,7 @@ bind ^R flipnewbuffer insert
 bind ^E flipexecute insert
 bind ^F browser insert
 
-bind ^S writeout all
+bind ^S savefile all
 bind ^D exit all
 bind ^Q cancel all
 bind ^F whereis all
