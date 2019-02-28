@@ -8,7 +8,7 @@ syntax "C" "\.(c(c|pp|xx)?|C)$" "\.(h(h|pp|xx)?|H)$" "\.ii?$" "\.(def)$"
 color yellow "\<((narrow|const|dynamic|reinterpret|static)_cast)\>"
 color yellow "\<(noexcept|alignof|sizeof|typeid|new|delete)\>"
 color yellow "\<(compl|(not|and|or|xor)(_eq)?|bit(and|or))\>"
-color yellow "[().:,+*|=!\%]" "<" ">" "/" "-" "&" "\[" "\]"
+color yellow "[().:,+*|=!\%^]" "<" ">" "/" "-" "&" "\[" "\]"
 color brightyellow "[0-9']([mun]?s|min|h|i[fl]?)\>"
 color brightyellow "\"sv?\>"
 color brightyellow "(\<([0-9]+|0[0-7]*|0x[a-fA-F0-9])|['"])_[a-zA-Z?]+\>"
@@ -61,6 +61,9 @@ color brightcyan "\\([\\"abefnrtv]|[0-3]?[0-7]{1,2}|x[0-9A-Fa-f]{1,2})"
 
 ##	Preprocessor
 color black,yellow "^[[:space:]]*#[[:space:]]*(define|include|(un|ifn?)def|endif|el(if|se)|if|warning|error|pragma).*"
+
+## Highlight dumb errors
+color black,red "^[[:space:]]*(if|else( +if)?|for|while).*\);[[:space:]]*(//.*)?$"
 
 ##	Comments
 comment "//"
