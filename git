@@ -19,7 +19,7 @@
 [pull]
 	ff = only
 [core]
-	editor = nano
+	editor = nano --tempfile
 [credential]
 	helper = cache --timeout 7200
 [credential "https://github.com"]
