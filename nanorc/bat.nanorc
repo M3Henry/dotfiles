@@ -1,0 +1,23 @@
+
+syntax "BAT" "\.bat$" "\.BAT$"
+
+color ,green "[[:space:]]+$"
+
+color cyan  ""(\\.|[^"])*""
+icolor yellow "%[^0-9%]\w+%|%[0-9]"
+color brightyellow "%%\w+"
+
+icolor brightred ":\w+\b"
+color brightcyan "\^$"
+
+
+
+icolor green "\<(do|for|if|else|goto|call)\>"
+#color green "(\{|\}|\(|\)|\;|\]|\[|`|\\|\$|<|>|!|=|&|\|)"
+#color green "-[Ldefgruwx]\>"
+#color green "-(eq|ne|gt|lt|ge|le|s|n|z)\>"
+#color brightblue "\<(cat|cd|chmod|chown|cp|echo|env|export|grep|install|let|ln|make|mkdir|mv|rm|sed|set|tar|touch|umask|unset)\>"
+#icolor brightgreen "^\s+[0-9A-Z_]+\s+\(\)"
+#icolor brightred "\$\{?[0-9A-Z_!@#$*?-]+\}?"
+#color brightyellow ""(\\.|[^"])*"" "'(\\.|[^'])*'"
+#color cyan "(^|[[:space:]])#.*$"
