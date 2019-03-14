@@ -11,6 +11,7 @@
 	m = !make
 [rebase]
 	autosquash = true
+	abbreviateCommands = true
 [color "status"]
 	changed = yellow
 	branch = green bold
