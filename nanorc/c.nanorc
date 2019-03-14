@@ -1,51 +1,39 @@
-## Here is an example for C/C++.
-##
-syntax "C" "\.(c(c|pp|xx)?|C)$" "\.(h(h|pp|xx)?|H)$" "\.ii?$" "\.(def)$"
-
+syntax "C" "\.c$" "\.h$" "\.i$"
 
 ##	Compiler
 # 	Operator
-color yellow "\<((narrow|const|dynamic|reinterpret|static)_cast)\>"
-color yellow "\<(noexcept|alignof|sizeof|typeid|new|delete)\>"
-color yellow "\<(compl|(not|and|or|xor)(_eq)?|bit(and|or))\>"
+color yellow "\<(alignof|sizeof)\>"
 color yellow "[().:,+*|=!\%^]" "<" ">" "/" "-" "&" "\[" "\]"
-color brightyellow "[0-9']([mun]?s|min|h|i[fl]?)\>"
-color brightyellow "\"sv?\>"
-color brightyellow "(\<([0-9]+|0[0-7]*|0x[a-fA-F0-9])|['"])_[a-zA-Z?]+\>"
 
 #	Constants
-color brightwhite "\<(null(ptr|opt)|true|false)\>"
 color brightred "\<0[0-7]+\>"
 color brightwhite "\<(0|[1-9][0-9]*|0x[a-f0-9A-F]+|[0-9]*\.[0-9]+)"
 color brightwhite "'([^'\]|(\\["'abefnrtv\\]))'" "'\\(([0-3]?[0-7]{1,2}))'" "'\\x[0-9A-Fa-f]{1,2}'"
 color brightwhite "\<(w?c(in|out|err|log)|hex|dec|oct|endl|memory_order_(relaxed|consume|acquire|release|acq_rel|seq_cst)|this_thread)\>"
 
 #	Types
-color green "\<(void|bool|char|wchar_t|char(16|32)_t|int|short|long|(un)?signed)\>"
+color green "\<(void|char|wchar_t|char(16|32)_t|int|short|long|(un)?signed)\>"
 color green "\<((size|u?int(ptr|(_(le|f)ast)?(8|16|32|64)|max)|cnd|mtx|tss|fpos|thrd|time|clock|mbstate|ptrdiff|max_align|atomic_(u?intprt|char(16|32)|wchar)|sig_atomic)_t)\>"
 color green "\<((pid|sig(set|info))_t)\>"
-color green "\<(null(ptr|opt)_t)\>"
-color green "\<(vector|array|(initializer_)?list|deque|stack|string(_view)?|(hash_|multi)?(set|map)|bitset|valarray|(basic_|w)?(ios|(osync|[io]|io)stream|[io]?(f|string)stream)|atomic|thread|(logic|domain|length|future|runtime|range|(ov|und)erflow|regex|(file)?system)_error|exception|bad_(optional_access|typeid|(any_)?cast|weak_ptr|function_call|alloc|array_new_length|exception|variant_access))\>"
-color green "\<(std|experimental|gsl|__gnu_cxx|chrono|((string(_view)?|chrono)_)?literals)\>"
-#	Template Type
-color brightgreen "\<([A-Z]s?|auto|decltype)\>"
+
+#color brightgreen
 
 #	Classes
-color red "\<(enum|struct|union|class|namespace|template|typename|this)\>"
-#	Access Specifier
-color brightred "\<(virtual|public|protected|private|explicit|friend|override|final)\>"
+color red "\<(enum|struct|union)\>"
+
+#color brightred
+
 #	Storage Specifier
-color brightblue "\<(using|typedef|alignas|extern|static|const(expr)?|mutable|volatile|register|inline|thread_local|operator)\>"
+color brightblue "\<(typedef|alignas|extern|static|const|volatile|register|inline)\>"
 
 #	Parentheses
 ##color magenta "[(){};]" "\[" "\]"
 #	Control Flow
-color magenta "\<(for|if|while|do|else|case|default|switch|try|catch)\>" "[{};]"
-color brightmagenta "\<(goto|continue|break|return|throw)\>"
-#	Templates
-##color red "<[a-z0-9< >]*>"
+color magenta "\<(for|if|while|do|else|case|default|switch)\>" "[{};]"
+color brightmagenta "\<(goto|continue|break|return)\>"
+
 #	Misc
-color black,magenta "\<(asm|concept|export|requires|static_assert)\>"
+color black,magenta "\<(asm)\>"
 #	GCC builtins
 color black,magenta "__attribute__[[:space:]]*\(\([^)]*\)\)" "__(aligned|asm|builtin|hidden|inline|packed|restrict|section|typeof|weak)__"
 
@@ -73,8 +61,6 @@ color brightblack start="/\*" end="\*/"
 
 ## Trailing whitespace
 color ,green "[[:space:]]+$"
-
-linter gcc --show-column --std=c++17
 
 #	This multi-line string highlighter is VERY resource intensive!
 #color cyan start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
