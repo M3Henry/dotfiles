@@ -3,7 +3,7 @@ header "^#!.*/(env +)?[bg]?make( |$)"
 
 color cyan  "\<(ifeq|ifdef|ifneq|ifndef|else|endif)\>"
 color cyan  "^(export|include|override|define|endef)\>"
-color brightmagenta  "^([^:	]+:){1,2}"
+color brightmagenta  "^[^:	]+:{1,2}"
 #color brightmagenta  "^[^:+	]+\+"
 color red "[=,%]" "\+=|\?=|:=|&&|\|\|"
 color brightblue "\$\((abspath|addprefix|addsuffix|and|basename|call|dir)[[:space:]]"
@@ -12,15 +12,26 @@ color brightblue "\$\((flavor|foreach|if|info|join|lastword|notdir|or)[[:space:]
 color brightblue "\$\((origin|patsubst|realpath|shell|sort|strip|suffix)[[:space:]]"
 color brightblue "\$\((value|warning|wildcard|word|wordlist|words)[[:space:]]"
 color brightwhite    "[()$]"
+
+# Strings
 color yellow ""(\\.|[^"])*"|'(\\.|[^'])*'"
+
+# Variable usage
 color brightyellow "\$+(\{[^} ]+\}|\([^) ]+\))"
 color brightyellow "\$[@^<*?%|+]|\$\([@^<*?%+-][DF]\)"
 color magenta   "\$\$|\\.?"
+
+# Comments
 color brightblack "(^|[[:space:]])#([^{].*)?$"
 color brightblack  "^	@#.*"
 
+# Variable declarations
+color green "^[[:alnum:]_]+[[:space:]]*="
+color brightgreen "^[[:alnum:]_]+[[:space:]]*\?="
+color yellow "^[[:alnum:]_]+[[:space:]]*:="
+
 # Special Built-in Target Names
-color green "\.(PHONY|SUFFIXES|DEFAULT|PRECIOUS|INTERMEDIATE|SECOND(ARY|EXPANSION)|DELETE_ON_ERROR|IGNORE|LOW_RESOLUTION_TIME|SILENT|EXPORT_ALL_VARIABLES|NOTPARALLEL|ONESHELL|POSIX)"
+color magenta "\.(PHONY|SUFFIXES|DEFAULT|PRECIOUS|INTERMEDIATE|SECOND(ARY|EXPANSION)|DELETE_ON_ERROR|IGNORE|LOW_RESOLUTION_TIME|SILENT|EXPORT_ALL_VARIABLES|NOTPARALLEL|ONESHELL|POSIX)"
 
 # Highlight Quiet lines
 color blue "^	@"
