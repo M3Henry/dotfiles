@@ -7,12 +7,15 @@ color cyan  ""(\\.|[^"])*""
 icolor yellow "%[^0-9%]\w+%|%[0-9]"
 color brightyellow "%%\w+"
 
-icolor brightred ":\w+\b"
+icolor brightred "^:\w+\b"
 color brightcyan "\^$"
 
 
-
 icolor green "\<(do|for|if|else|goto|call)\>"
+
+icolor brightblack "^[[:space:]]*rem.*\>"
+
+
 #color green "(\{|\}|\(|\)|\;|\]|\[|`|\\|\$|<|>|!|=|&|\|)"
 #color green "-[Ldefgruwx]\>"
 #color green "-(eq|ne|gt|lt|ge|le|s|n|z)\>"
