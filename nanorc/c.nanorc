@@ -30,10 +30,11 @@ color brightblue "\<(typedef|alignas|extern|static|const|volatile|register|inlin
 ##color magenta "[(){};]" "\[" "\]"
 #	Control Flow
 color magenta "\<(for|if|while|do|else|case|default|switch)\>" "[{};]"
-color brightmagenta "\<(goto|continue|break|return)\>"
+color brightmagenta "\<(goto[[:space:]]+[[:alnum:]_]+|continue|break|return)\>"
+color brightmagenta "^[[:space:]]*[[:alnum:]_]+:"
 
 #	Misc
-color black,magenta "\<(asm)\>"
+color black,magenta "\<asm\>"
 #	GCC builtins
 color black,magenta "__attribute__[[:space:]]*\(\([^)]*\)\)" "__(aligned|asm|builtin|hidden|inline|packed|restrict|section|typeof|weak)__"
 
